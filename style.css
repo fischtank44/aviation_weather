@@ -33,8 +33,11 @@ textarea {
     width: 215px;
 }
 
+#full-report{
+    padding-right: 20%;
+}
 
-#full-report {
-    padding-right: 10%;
+#full-report_text {
+    padding-right: 17%;
 }
 
