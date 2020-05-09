@@ -1,0 +1,40 @@
+h2 {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#container-top {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+#root {
+        font-size: 24px;
+        text-align: right;
+        padding-top: 20px;
+        padding-right: 45%;
+    }
+
+input {
+    padding-right: 5em;
+    height: 25px;
+    width: 250px;
+}
+
+button {
+    height: 25px;
+    width: 320px;
+}
+
+textarea {
+    height: 250px;
+    width: 215px;
+}
+
+
+#full-report {
+    padding-right: 10%;
+}
+
