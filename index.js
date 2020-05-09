@@ -43,15 +43,46 @@ function loadXMLDoc() {
     xmlhttp.send();
   }
   
+//   function myFunction(xml) {
+//     var x, i, xmlDoc, txt;
+//     xmlDoc = xml.responseXML;
+//     txt = "";
+//     x = xmlDoc.getElementsByTagName("station_id");
+//     y = xmlDoc.getElementsByTagName("raw_text")
+//     for (i = 0; i< x.length; i++) {
+//         if (x[i].childNodes[0].nodeValue === (document.getElementById("afld").value.toUpperCase())) {
+//             txt += y[i].childNodes[0].nodeValue;}
+//     }
+//     document.getElementById("full_report_text").innerHTML = txt;
+//   }
+
+    
   function myFunction(xml) {
     var x, i, xmlDoc, txt;
     xmlDoc = xml.responseXML;
     txt = "";
+    w = xmlDoc.getElementsByTagName("METAR");
     x = xmlDoc.getElementsByTagName("station_id");
-    y = xmlDoc.getElementsByTagName("raw_text")
+    y = xmlDoc.getElementsByTagName("raw_text");
     for (i = 0; i< x.length; i++) {
         if (x[i].childNodes[0].nodeValue === (document.getElementById("afld").value.toUpperCase())) {
-            txt += y[i].childNodes[0].nodeValue;}
+            console.log( w[i],  w[i].getElementsByTagName("observation_time")[0].innerHTML , w[i].getElementsByTagName("temp_c")[0].innerHTML); 
+            document.getElementById("full_report_text").innerHTML += y[i].childNodes[0].nodeValue;
+            document.getElementById("observation_time_text").value = w[i].getElementsByTagName("observation_time")[0].innerHTML; 
+            document.getElementById("temp_c_text").value = w[i].getElementsByTagName("temp_c")[0].innerHTML; 
+            document.getElementById("dewpoint_c_text").value = w[i].getElementsByTagName("dewpoint_c")[0].innerHTML; 
+            document.getElementById("wind_dir_degrees_text").value = w[i].getElementsByTagName("wind_dir_degrees")[0].innerHTML; 
+            document.getElementById("wind_speed_kt_text").value = w[i].getElementsByTagName("wind_speed_kt")[0].innerHTML; 
+            document.getElementById("wind_speed_kt_text").value = w[i].getElementsByTagName("wind_speed_kt")[0].innerHTML; 
+            document.getElementById("wind_gust_kt_text").value = w[i].getElementsByTagName("wind_gust_kt")[0].innerHTML; 
+            document.getElementById("visibility_statute_mi_text").value = w[i].getElementsByTagName("visibility_statute_mi")[0].innerHTML; 
+            document.getElementById("altim_in_hg_text").value = w[i].getElementsByTagName("altim_in_hg")[0].innerHTML; 
+            document.getElementById("wind_speed_kt_text").value = w[i].getElementsByTagName("wind_speed_kt")[0].innerHTML; 
+            document.getElementById("wind_speed_kt_text").value = w[i].getElementsByTagName("wind_speed_kt")[0].innerHTML; 
+            document.getElementById("flight_category_text").value = w[i].getElementsByTagName("flight_category")[0].innerHTML; 
+            document.getElementById("wind_speed_kt_text").value = w[i].getElementsByTagName("flight_category")[0].innerHTML; 
+            document.getElementById("metar_type_text").value = w[i].getElementsByTagName("metar_type")[0].innerHTML; 
+            document.getElementById("elevation_m_text").value = w[i].getElementsByTagName("elevation_m")[0].innerHTML; 
     }
-    document.getElementById("full-report_text").innerHTML = txt;
+    }
   }
