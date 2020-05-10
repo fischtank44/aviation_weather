@@ -1,6 +1,6 @@
 # aviation_weather
 
-<METAR>
+"<METAR>
 <raw_text>KESN 091750Z 29015G22KT 10SM BKN060 11/M06 A3005</raw_text>
 <station_id>KESN</station_id>
 <observation_time>2020-05-09T17:50:00Z</observation_time>
@@ -17,4 +17,4 @@
 <flight_category>VFR</flight_category>
 <metar_type>METAR</metar_type>
 <elevation_m>22.0</elevation_m>
-</METAR>
+</METAR>"
