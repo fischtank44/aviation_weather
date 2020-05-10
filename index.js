@@ -67,7 +67,7 @@ function loadXMLDoc() {
     for (i = 0; i< x.length; i++) {
         if (x[i].childNodes[0].nodeValue === (document.getElementById("afld").value.toUpperCase())) {
             
-            console.log( w[i],  w[i].getElementsByTagName("sky_condition")[0] , w[i].getElementsByTagName("wind_gust_kt")[0]) ; 
+            console.log( w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[1].split('"')[1] ,w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[2].split('"')[1]); 
             document.getElementById("full_report_text").innerHTML += y[i].childNodes[0].nodeValue;
             document.getElementById("observation_time_text").value = w[i].getElementsByTagName("observation_time")[0].innerHTML; 
             document.getElementById("temp_c_text").value = w[i].getElementsByTagName("temp_c")[0].innerHTML; 
@@ -81,7 +81,8 @@ function loadXMLDoc() {
         }  
             document.getElementById("visibility_statute_mi_text").value = w[i].getElementsByTagName("visibility_statute_mi")[0].innerHTML; 
             document.getElementById("altim_in_hg_text").value = w[i].getElementsByTagName("altim_in_hg")[0].innerHTML; 
-            document.getElementById("sky_cover_text").value = w[i].getElementsByTagName("sky_condition")[0].outerHTML;
+            document.getElementById("sky_cover_text").value = w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[1].split('"')[1] ;
+            document.getElementById("cloud_base_ft_agl_text").value = w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[2].split('"')[1] ;
             document.getElementById("flight_category_text").value = w[i].getElementsByTagName("flight_category")[0].innerHTML; 
             document.getElementById("metar_type_text").value = w[i].getElementsByTagName("metar_type")[0].innerHTML; 
             document.getElementById("elevation_m_text").value = w[i].getElementsByTagName("elevation_m")[0].innerHTML;
