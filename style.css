@@ -4,7 +4,7 @@
 
 
 h2 {
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
     padding-top: 20px;
 }
@@ -16,7 +16,7 @@ h2 {
 }
 
 .root {
-        font-size: 24px;
+        font-size: 22px;
         text-align: right;
         padding-top: 20px;
         padding-right: 45%;
@@ -40,7 +40,7 @@ textarea {
 }
 
 #full-report_label{
-    padding-right: 6%;
+    padding-right: 15%;
 }
 
 #full_report_text {
