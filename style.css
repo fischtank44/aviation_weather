@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
 h2 {
     font-size: 48px;
     text-align: center;
@@ -10,11 +15,11 @@ h2 {
     padding-top: 20px;
 }
 
-#root {
+.root {
         font-size: 24px;
         text-align: right;
         padding-top: 20px;
-        padding-right: 35%;
+        padding-right: 45%;
     }
 
 input {
@@ -34,8 +39,8 @@ textarea {
     width: 215px;
 }
 
-#full-report{
-    padding-right: 10%;
+#full-report_label{
+    padding-right: 6%;
 }
 
 #full_report_text {
@@ -43,4 +48,32 @@ textarea {
     width: 250px;
 }
 
+/* .background{
+    /* background: url(/images/sample.jpg);
+    background-color: rgba(255, 0, 0, 0.6);
+  } */
 
+
+.background { 
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('https://placekitten.com/1200/800');
+    background-size: cover;
+    opacity: 0.75; */
+}
+    
+&::before {  
+    content: "";
+    background-image: url('https://weather.com/maps/ustemperaturemap');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}

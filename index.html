@@ -9,56 +9,63 @@
 
 </head>
 <body>
-    <h2 >This is the Aviation Weather Checker</h2>
-    <div id="root">
 
-            <label for="afld">Airfield ID(K***)</label>
+    <div class="background">       
+    
+        <h2 >This is the Aviation Weather Checker</h2>
+    <div class="root">
+
+
+            <label for="afld">Airfield ID (example: KSEA)</label>
             <input type="text" id="afld" name="afld"><br>
-            <button type="button" onclick="loadXMLDoc()">Submit</button><br><br>
+            <button type="button" onclick="loadXMLDoc()">Submit</button><br>
 
-            <label id="full-report" for="full-report">Full Report</label><br>
+            <label id="full-report_label" for="full-report">Full Report</label><br>
             <textarea type="full-report" id="full_report_text" name="full-report"></textarea><br>
 
             <label for="time">Time (Z)</label>
-            <input type="text" id="observation_time_text" name="time"><br><br>
+            <input type="text" id="observation_time_text" name="time"><br>
+
+            <label for="temp">Temperature (F)</label>
+            <input type="text" id="temp_f_text" name="temp"><br>
 
             <label for="temp">Temperature (C)</label>
-            <input type="text" id="temp_c_text" name="temp"><br><br>
+            <input type="text" id="temp_c_text" name="temp"><br>
 
             <label for="dewpoint">Dewpoint (C)</label>
-            <input type="text" id="dewpoint_c_text" name="dewpoint_c_text"><br><br>
+            <input type="text" id="dewpoint_c_text" name="dewpoint_c_text"><br>
 
             <label for="wind_direction">Wind Direction (kts)</label>
-            <input type="text" id="wind_dir_degrees_text" name="wind_dir_degrees"><br><br>
+            <input type="text" id="wind_dir_degrees_text" name="wind_dir_degrees"><br>
 
             <label for="wind_speed">Wind Speed (kts)</label>
-            <input type="text" id="wind_speed_kt_text" name="wind_speed_kt_text"><br><br>
+            <input type="text" id="wind_speed_kt_text" name="wind_speed_kt_text"><br>
 
             <label for="wind_gust_kt">Wind Gusts (kts)</label>
-            <input type="text" id="wind_gust_kt_text" name="wind_gust_kt"><br><br>
+            <input type="text" id="wind_gust_kt_text" name="wind_gust_kt"><br>
 
             <label for="visibility_statute_miles">Visibility (miles) </label>
-            <input type="text" id="visibility_statute_mi_text" name="visibility_statute_mi"><br><br>
+            <input type="text" id="visibility_statute_mi_text" name="visibility_statute_mi"><br>
 
             <label for="altimiter">Altimeter (in-hg)</label>
-            <input type="text" id="altim_in_hg_text" name="altim_in_hg"><br><br>
+            <input type="text" id="altim_in_hg_text" name="altim_in_hg"><br>
 
             <label for="sky_condition">Sky Condition</label>
             <input type="text" id="sky_cover_text" name="sky_cover_text"><br>
-            <input type="text" id="cloud_base_ft_agl_text" name="cloud_base_ft_agl"><br><br>
+            <input type="text" id="cloud_base_ft_agl_text" name="cloud_base_ft_agl"><br>
 
             <label for="flight_category">Flight Category</label>
-            <input type="text" id="flight_category_text" name="flight_category"><br><br>
+            <input type="text" id="flight_category_text" name="flight_category"><br>
 
             <label for="metar_type">Report Type</label>
-            <input type="text" id="metar_type_text" name="metar_type"><br><br>
+            <input type="text" id="metar_type_text" name="metar_type"><br>
 
             <label for="elevation">Reporting Station Elevation (m)</label>
-            <input type="text" id="elevation_m_text" name="elevation_m"><br><br>
+            <input type="text" id="elevation_m_text" name="elevation_m"><br>
 
         </div>
 
-
+    </div>
 
 
     </div>

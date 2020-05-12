@@ -1,29 +1,9 @@
-
-// const express = require('express');
-// const request = require('request');
-
-// const app = express();
-
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
-// app.get('/jokes/random', (req, res) => {
-//   request(
-//     { url: 'https://www.aviationweather.gov/adds/dataserver_current/current/metars.cache.xml' },
-//     (error, response, body) => {
-//       if (error || response.statusCode !== 200) {
-//         return res.status(500).json({ type: 'error', message: err.message });
-//       }
-
-//       res.json(JSON.parse(body));
-//     }
-//   )
-// });
-
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`listening on ${PORT}`));
+var image = document.images[0];
+var downloadingImage = new Image();
+downloadingImage.onload = function(){
+    image.src = this.src;   
+};
+downloadingImage.src = "https://weather.com/maps/ustemperaturemap";
 
 // https://www.aviationweather.gov/metar/data?ids=Ksea&format=raw&date=&hours=0&taf=on
 
@@ -68,8 +48,9 @@ function loadXMLDoc() {
         if (x[i].childNodes[0].nodeValue === (document.getElementById("afld").value.toUpperCase())) {
             
             console.log( w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[1].split('"')[1] ,w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[2].split('"')[1]); 
-            document.getElementById("full_report_text").innerHTML += y[i].childNodes[0].nodeValue;
+            document.getElementById("full_report_text").innerHTML += y[i].childNodes[0].nodeValue + "\n\n";
             document.getElementById("observation_time_text").value = w[i].getElementsByTagName("observation_time")[0].innerHTML; 
+            document.getElementById("temp_f_text").value = (Math.round(((w[i].getElementsByTagName("temp_c")[0].innerHTML)*(9/5)+32)*10)/10) ; 
             document.getElementById("temp_c_text").value = w[i].getElementsByTagName("temp_c")[0].innerHTML; 
             document.getElementById("dewpoint_c_text").value = w[i].getElementsByTagName("dewpoint_c")[0].innerHTML; 
             document.getElementById("wind_dir_degrees_text").value = w[i].getElementsByTagName("wind_dir_degrees")[0].innerHTML; 
