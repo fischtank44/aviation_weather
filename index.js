@@ -61,7 +61,7 @@ function loadXMLDoc() {
             console.log(e)
         }  
             document.getElementById("visibility_statute_mi_text").value = w[i].getElementsByTagName("visibility_statute_mi")[0].innerHTML; 
-            document.getElementById("altim_in_hg_text").value = w[i].getElementsByTagName("altim_in_hg")[0].innerHTML; 
+            document.getElementById("altim_in_hg_text").value = (Math.round((w[i].getElementsByTagName("altim_in_hg")[0].innerHTML)*1000))/1000; 
             document.getElementById("sky_cover_text").value = w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[1].split('"')[1] ;
             document.getElementById("cloud_base_ft_agl_text").value = w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[2].split('"')[1] ;
             document.getElementById("flight_category_text").value = w[i].getElementsByTagName("flight_category")[0].innerHTML; 
