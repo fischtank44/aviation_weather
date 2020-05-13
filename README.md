@@ -3,38 +3,34 @@
 ## Type in the code for the airfield you want to check and get to the fun part faster. 
 
 
-'<METAR>'
+<METAR>
+<raw_text> KESN 091750Z 29015G22KT 10SM BKN060 11/M06 A3005</raw_text>
+<station_id>KESN</station_id>
+<observation_time>2020-05-09T17:50:00Z</observation_time>
+<latitude>38.8</latitude>
 
-'<raw_text>KESN 091750Z 29015G22KT 10SM BKN060 11/M06 A3005</raw_text>'
+<longitude>-76.07</longitude>
 
-<station_id>KESN</station_id>'
+<temp_c>11.0</temp_c>
 
-'<observation_time>2020-05-09T17:50:00Z</observation_time>'
+<dewpoint_c>-6.0</dewpoint_c>
 
-'<latitude>38.8</latitude>'
+<wind_dir_degrees>290</wind_dir_degrees>
 
-'<longitude>-76.07</longitude>'
+<wind_speed_kt>15</wind_speed_kt>
 
-'<temp_c>11.0</temp_c>'
+<wind_gust_kt>22</wind_gust_kt>
 
-<dewpoint_c>-6.0</dewpoint_c>'
+<visibility_statute_mi>10.0</visibility_statute_mi>
 
-'<wind_dir_degrees>290</wind_dir_degrees>'
+<altim_in_hg>30.050198</altim_in_hg>
 
-'<wind_speed_kt>15</wind_speed_kt>'
+<sky_condition sky_cover="BKN" cloud_base_ft_agl="6000"/>
 
-'<wind_gust_kt>22</wind_gust_kt>'
+<flight_category>VFR</flight_category>
 
-'<visibility_statute_mi>10.0</visibility_statute_mi>'
+<metar_type>METAR</metar_type>
 
-'<altim_in_hg>30.050198</altim_in_hg>'
+<elevation_m>22.0</elevation_m>
 
-'<sky_condition sky_cover="BKN" cloud_base_ft_agl="6000"/>'
-
-'<flight_category>VFR</flight_category>'
-
-'<metar_type>METAR</metar_type>'
-
-'<elevation_m>22.0</elevation_m>'
-
-'</METAR>'
+</METAR>
