@@ -5,11 +5,6 @@ downloadingImage.onload = function(){
 };
 downloadingImage.src = "https://weather.com/maps/ustemperaturemap";
 
-// https://www.aviationweather.gov/metar/data?ids=Ksea&format=raw&date=&hours=0&taf=on
-
-//https://www.aviationweather.gov/metar/data?ids=${apt}&format=raw&date=&hours=0&taf=on
-
-//https://www.aviationweather.gov/adds/dataserver_current/current/metars.cache.xml
 
 
 function loadXMLDoc() {
@@ -23,6 +18,12 @@ function loadXMLDoc() {
     xmlhttp.send();
   }
   
+  function linkToWeather() {
+    let apt = document.getElementById("afld").value.toUpperCase()
+    window.open(`https://www.aviationweather.gov/metar/data?ids=${apt}&format=decoded&date=&hours=0&taf=on`);
+  }
+
+
 //   function myFunction(xml) {
 //     var x, i, xmlDoc, txt;
 //     xmlDoc = xml.responseXML;
@@ -72,6 +73,7 @@ function loadXMLDoc() {
     }
   }
 
+  // https://www.aviationweather.gov/metar/data?ids=KSEA&format=decoded&date=&hours=0&taf=on
 
 //   <input type="text" id="sky_cover_text" name="sky_cover_text"><br>
 //   <input type="text" id="cloud_base_ft_agl_text" name="cloud_base_ft_agl"><br><br>

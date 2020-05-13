@@ -18,7 +18,7 @@
 
             <label for="afld">Airfield ID (example: KSEA)</label>
             <input type="text" id="afld" name="afld"><br>
-            <button type="button" onclick="loadXMLDoc()">Submit</button><br>
+            <button type="button" id="pull_xml" onclick="loadXMLDoc()">METAR</button><button type="button" id="go_to_noaa" onclick="linkToWeather()">METAR and TAF</button><br>
 
             <label id="full-report_label" for="full-report">Full Report</label><br>
             <textarea type="full-report" id="full_report_text" name="full-report"></textarea><br>
@@ -60,7 +60,7 @@
             <label for="metar_type">Report Type</label>
             <input type="text" id="metar_type_text" name="metar_type"><br>
 
-            <label for="elevation">Reporting Station Elevation (m)</label>
+            <label for="elevation">Station Elevation (m)</label>
             <input type="text" id="elevation_m_text" name="elevation_m"><br>
 
         </div>
