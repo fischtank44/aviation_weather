@@ -50,7 +50,7 @@ function loadXMLDoc() {
             
             console.log( w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[1].split('"')[1] ,w[i].getElementsByTagName("sky_condition")[0].outerHTML.split(" ")[2].split('"')[1]); 
             document.getElementById("full_report_text").innerHTML += y[i].childNodes[0].nodeValue + "\n\n";
-            document.getElementById("observation_time_text").value = w[i].getElementsByTagName("observation_time")[0].innerHTML.replace("T", " "); 
+            document.getElementById("observation_time_text").value = w[i].getElementsByTagName("observation_time")[0].innerHTML.replace("T", "  "); 
             document.getElementById("temp_f_text").value = (Math.round(((w[i].getElementsByTagName("temp_c")[0].innerHTML)*(9/5)+32)*10)/10) ; 
             document.getElementById("temp_c_text").value = w[i].getElementsByTagName("temp_c")[0].innerHTML; 
             document.getElementById("dewpoint_c_text").value = w[i].getElementsByTagName("dewpoint_c")[0].innerHTML; 
