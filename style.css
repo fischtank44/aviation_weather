@@ -20,31 +20,37 @@ label{
         padding-top: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
     }
 
-input {
+#afld {
+    width: 400px;
+}
+
+input[type=text] {
     height: 25px;
     width: 250px;
+    flex-shrink: unset;
+    float: right;
     text-align: center;
 }
 
 button {
     height: 25px;
-    width: 250px;
+    width: 430px;
     text-align: center;
     background: rgb(224, 224, 201)
 }
 
 textarea {
     height: 300px;
-    width: 200px;
+    width: 440px;
 }
 
 
 #full_report_text {
-    width: 300px;
+    width: 430px;
 }
 
 
@@ -62,7 +68,7 @@ textarea {
     padding-top: 5px;
     align-self: center;
     display: flex;
-    align-items: center;
+    padding-right: 50%;
     justify-content: center;
     flex-direction: column;
 }
