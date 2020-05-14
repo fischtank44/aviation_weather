@@ -2,6 +2,9 @@
     box-sizing: border-box;
   }
 
+/* div {
+    border: 1px solid black;
+} */
 
 h2 {
     font-size: 40px;
@@ -9,17 +12,20 @@ h2 {
     padding-top: 20px;
 
 }
-#container-top {
+/* #container-top {
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
-}
+} */
 
 .root {
-        font-size: 22px;
-        text-align: right;
+        font-size: 16px;
+        /* text-align: right; */
         padding-top: 20px;
-        padding-right: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 input {
@@ -37,16 +43,19 @@ button {
 
 textarea {
     height: 300px;
-    width: 215px;
+    width: 200px;
+    /* justify-self: right;
+    justify-items: right;
+    justify-content: right;
+    align-items: right;
+    align-self: right;
+    align-content: right; */
 }
 
-#full-report_label{
-    padding-right: 15%;
-}
 
 #full_report_text {
     /* padding-right: 17%; */
-    width: 250px;
+    width: 300px;
 }
 
 
@@ -59,15 +68,22 @@ textarea {
     justify-content: center;
     background-color: lightblue;
 }
-    
-&::before {  
-    content: "";
-    background-image: url('https://weather.com/maps/ustemperaturemap');
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.2;
+
+#form {
+    padding-top: 5px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+.field {
+    display: inline;
+}
+
+#left_column {
+    padding-top: 10em;
+}
+/* text {
+    padding-right: 50em;
+} */
